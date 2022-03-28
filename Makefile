@@ -13,7 +13,7 @@ MAKEFLAGS+=--no-builtin-rules
 # Project settings
 
 DIR=$(shell basename $$(pwd))
-ADDON ?= "volto-separator-block"
+ADDON ?= "volto-carousel-block"
 
 # Recipe snippets for reuse
 
