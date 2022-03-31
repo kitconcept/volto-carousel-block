@@ -1,4 +1,4 @@
-# Volto Carousel Block <img src="https://raw.githubusercontent.com/plone/pastanaga-icons/master/Icons/divide-horizontal.svg">
+# Volto Carousel Block
 
 [![NPM](https://img.shields.io/npm/v/@kitconcept/volto-carousel-block.svg)](https://www.npmjs.com/package/@kitconcept/volto-carousel-block)
 [![Build Status](https://github.com/kitconcept/volto-carousel-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-carousel-block/actions)
