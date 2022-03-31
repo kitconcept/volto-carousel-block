@@ -44,7 +44,7 @@ const NextArrow = ({ className, style, onClick }) => (
 );
 
 const CarouselView = (props) => {
-  const { data, isEditMode } = props;
+  const { block, data, isEditMode, openObjectBrowser, onChangeBlock } = props;
   const [mobileSize, setmobileSize] = useState(false);
   const intl = useIntl();
   let noOfSlide = data.items_to_show ?? 4;
@@ -110,12 +110,16 @@ const CarouselView = (props) => {
               prevArrow={<PrevArrow />}
             >
               {data.columns &&
-                data.columns.map((item) => (
+                data.columns.map((item, index) => (
                   <Body
                     key={item['@id']}
                     data={item}
                     isEditMode={isEditMode}
                     dataBlock={data}
+                    index={index}
+                    block={block}
+                    openObjectBrowser={openObjectBrowser}
+                    onChangeBlock={onChangeBlock}
                   />
                 ))}
             </Slider>

@@ -45,7 +45,7 @@ const CarouselData = (props) => {
           [id]: value,
         });
       }}
-      formData={props.data}
+      formData={props.data || { '@type': 'carousel', columns: [{}] }}
       block={props.block}
     />
   );

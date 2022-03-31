@@ -1,16 +1,21 @@
 import React from 'react';
-import { Message } from 'semantic-ui-react';
+import { Input, Button, Message } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getTeaserImageURL } from '../helpers';
-import { MaybeWrap, UniversalLink } from '@plone/volto/components';
+import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
+import navTreeSVG from '@plone/volto/icons/nav.svg';
 
 const messages = defineMessages({
   PleaseChooseContent: {
     id: 'Please choose an existing content as source for this element',
     defaultMessage:
       'Please choose an existing content as source for this element',
+  },
+  source: {
+    id: 'Source',
+    defaultMessage: 'Source',
   },
 });
 
@@ -26,11 +31,38 @@ defineMessages({
   },
 });
 
-const CarouselBody = ({ data, dataBlock, isEditMode }) => {
+const CarouselBody = ({
+  index,
+  onChangeBlock,
+  block,
+  data,
+  dataBlock,
+  isEditMode,
+  openObjectBrowser,
+}) => {
   const intl = useIntl();
   const href = data.href?.[0];
   const imageType = href && href?.image_field && href.image_field;
   const image = data.preview_image?.[0];
+  const handleClick = () => {
+    openObjectBrowser({
+      onSelectItem: (url, document) => {
+        dataBlock.columns[index].title = document.Title;
+        dataBlock.columns[index].description = document.Description;
+        dataBlock.columns[index].href = [
+          {
+            '@id': document['@id'],
+            Title: document.Title,
+            Description: document.Description,
+            title: document.Title,
+            image_field: document.image_field,
+          },
+        ];
+        onChangeBlock(block, dataBlock);
+      },
+      mode: 'link',
+    });
+  };
 
   return (
     <>
@@ -39,6 +71,18 @@ const CarouselBody = ({ data, dataBlock, isEditMode }) => {
           <div className="grid-teaser-item default">
             <img src={imageBlockSVG} alt="" />
             <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
+            <div className="toolbar-inner">
+              <Button.Group>
+                <Button onClick={handleClick} icon basic>
+                  <Icon name={navTreeSVG} size="24px" />
+                </Button>
+              </Button.Group>
+              <Input
+                placeholder={`${intl.formatMessage(messages.source)}...`}
+                onClick={handleClick}
+                onFocus={(e) => e.target.blur()}
+              />
+            </div>
           </div>
         </Message>
       )}
