@@ -71,6 +71,7 @@ msgstr "Kies een bestaand item als bron voor dit element"
 msgid "Settings"
 msgstr "Instellingen"
 
+#: components/Body
 #: components/schema
 # defaultMessage: Source
 msgid "Source"
