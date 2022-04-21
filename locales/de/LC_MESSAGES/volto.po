@@ -72,6 +72,7 @@ msgstr "Bitte wählen sie einen existierenden Inhalt als Quelle für dieses Elem
 msgid "Settings"
 msgstr "Einstellungen"
 
+#: components/Body
 #: components/schema
 # defaultMessage: Source
 msgid "Source"

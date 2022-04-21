@@ -67,6 +67,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: components/Body
 #: components/schema
 # defaultMessage: Source
 msgid "Source"
