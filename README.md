@@ -17,6 +17,8 @@ The Volto Carousel Block allows editors to add a carousel to a Volto page.
 
 ![Carousel-Block](https://github.com/kitconcept/volto-carousel-block/raw/master/screencast.gif)
 
+https://user-images.githubusercontent.com/486927/164645687-f1318004-aa32-4438-8adc-45f623714649.mov
+
 ## Installation
 
 Create a new Volto project (you can skip this step if you already have one):
