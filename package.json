@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-carousel-block",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "volto-carousel-block: Volto add-on that provides a carousel block",
   "main": "src/index.js",
   "license": "MIT",
