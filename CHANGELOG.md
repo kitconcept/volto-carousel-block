@@ -2,13 +2,13 @@
 
 ## 1.0.0 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
+- Remove screenshot and video from npm package @sneridagh
+
 ### Internal
+
+- Add `.npmignore` @sneridagh
 
 ## 1.0.0-alpha.0 (2022-04-22)
 
