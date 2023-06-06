@@ -6,6 +6,7 @@
 
 ### Feature
 
+- Add Brazilian Portuguese translation @ericof
 ### Bugfix
 
 ### Internal
