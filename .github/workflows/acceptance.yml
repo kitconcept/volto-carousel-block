@@ -2,8 +2,8 @@ name: Acceptance tests
 on: [push]
 
 env:
-  ADDON_NAME: "@kitconcept/volto-blocks-grid"
-  ADDON_PATH: "volto-blocks-grid"
+  ADDON_NAME: "@kitconcept/volto-carousel-block"
+  ADDON_PATH: "volto-carousel-block"
   VOLTO_VERSION: "16"
 
 jobs:
