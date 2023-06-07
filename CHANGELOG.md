@@ -8,6 +8,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.1.0 (2023-06-07)
+
+### Feature
+
+- Add Brazilian Portuguese translation @ericof [#5](https://github.com/kitconcept/volto-carousel-block/pull/5)
+- New add-on tests model based on docker @sneridagh [#6](https://github.com/kitconcept/volto-carousel-block/pull/6)
+
+
 ## 1.0.1 (unreleased)
 
 ### Breaking
