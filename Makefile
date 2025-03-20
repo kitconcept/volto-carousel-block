@@ -103,6 +103,11 @@ backend-docker-start:	## Starts a Docker-based backend for development
 	@echo "$(GREEN)==> Start Docker-based Plone Backend$(RESET)"
 	docker run -it --rm --name=backend -p 8080:8080 -e SITE=Plone $(DOCKER_IMAGE)
 
+.PHONY: backend-docker-detached-start
+backend-docker-detached-start:	## Starts a Docker-based backend for development
+	@echo "$(GREEN)==> Start Docker-based Plone Backend$(RESET)"
+	docker run -d -it --rm --name=backend -p 8080:8080 -e SITE=Plone $(DOCKER_IMAGE)
+
 ## Storybook
 .PHONY: storybook-start
 storybook-start: ## Start Storybook server on port 6006
