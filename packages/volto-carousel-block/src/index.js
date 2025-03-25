@@ -1,5 +1,6 @@
 import Edit from '@kitconcept/volto-carousel-block/components/Edit';
 import View from '@kitconcept/volto-carousel-block/components/View';
+import { Schema } from '@kitconcept/volto-carousel-block/components/schema';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 import './theme/_main.scss';
@@ -15,7 +16,9 @@ const applyConfig = (config) => {
     restricted: false,
     mostUsed: true,
     sidebarTab: 1,
+    blockSchema: Schema,
   };
+
   return config;
 };
 

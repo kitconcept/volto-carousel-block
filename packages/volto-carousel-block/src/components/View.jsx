@@ -1,45 +1,62 @@
 import React from 'react';
-import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
-import config from '@plone/volto/registry';
 import cx from 'classnames';
 import useEmblaCarousel from 'embla-carousel-react';
+import { PrevButton, NextButton, usePrevNextButtons } from './DotsAndArrows';
+import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBody';
 
 const View = (props) => {
-  const { data, path, className } = props;
-  const metadata = props.metadata || props.properties;
-  if (data.blocks_layout === undefined) {
-    return null;
-  }
-  const columns = data.blocks_layout.items;
-  const blocksConfig =
-    config.blocks.blocksConfig[data['@type']].blocksConfig ||
-    props.blocksConfig;
-  const location = {
-    pathname: path,
-  };
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const { data, className, isEditMode } = props;
+  const itemsToShow = data.items_to_show || '4';
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    slidesToScroll: 1,
+    align: 'start',
+  });
 
-  React.useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes());
-    }
-  }, [emblaApi]);
+  const { prevBtnDisabled, nextBtnDisabled, scrollPrev, scrollNext } =
+    usePrevNextButtons(emblaApi);
 
-  console.log(data);
+  const columns =
+    data.columns?.length < itemsToShow ? data.columns?.length : itemsToShow;
 
   return (
-    <div className={cx('block carousel', className)}>
+    <div
+      className={cx(
+        'block',
+        data['@type'],
+        {
+          two: columns === '2',
+          three: columns === '3',
+          four: columns === '4',
+          five: columns === '5',
+        },
+        className,
+      )}
+    >
+      {data.headline && <h2 className="headline">{data.headline}</h2>}
       <div className="carousel-wrapper">
+        <>
+          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+        </>
         <div className="carousel-viewport" ref={emblaRef}>
           <div className="carousel-container">
-            <RenderBlocks
-              {...props}
-              metadata={metadata}
-              content={data}
-              location={location}
-              blocksConfig={blocksConfig}
-              isContainer
-            />
+            {data.columns?.map((columnData) => {
+              // since `hide_description` is a block-level setting,
+              // we need to add it to the column data before we pass it to the
+              // `DefaultBody` component.
+              const newColumnData = {
+                ...columnData,
+                hide_description: data.hide_description,
+              };
+              return (
+                <DefaultBody
+                  key={newColumnData['@id']}
+                  data={newColumnData}
+                  isEditMode={isEditMode}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

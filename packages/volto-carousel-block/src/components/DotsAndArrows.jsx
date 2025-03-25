@@ -1,3 +1,4 @@
+import { useState, useCallback, useEffect } from 'react';
 import { Icon } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
 import rightArrowSVG from '@plone/volto/icons/right-key.svg';
@@ -31,6 +32,40 @@ export const DotButton = (props) => {
       {children}
     </button>
   );
+};
+
+export const usePrevNextButtons = (emblaApi) => {
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
+
+  const scrollPrev = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback((emblaApi) => {
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect(emblaApi);
+    emblaApi.on('reInit', onSelect).on('select', onSelect);
+  }, [emblaApi, onSelect]);
+
+  return {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    scrollPrev,
+    scrollNext,
+  };
 };
 
 export const PrevButton = (props) => {
