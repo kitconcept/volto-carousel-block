@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import useEmblaCarousel from 'embla-carousel-react';
 import { PrevButton, NextButton, usePrevNextButtons } from './DotsAndArrows';
+import { DotButton, useDotButton } from './DotsAndArrows';
 import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBody';
 
 const View = (props) => {
@@ -15,6 +16,9 @@ const View = (props) => {
 
   const { prevBtnDisabled, nextBtnDisabled, scrollPrev, scrollNext } =
     usePrevNextButtons(emblaApi);
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
 
   const columns =
     data.columns?.length < itemsToShow ? data.columns?.length : itemsToShow;
@@ -60,6 +64,19 @@ const View = (props) => {
           </div>
         </div>
       </div>
+      {data.columns?.length > itemsToShow && (
+        <div className="carousel-dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'carousel-dot'.concat(
+                index === selectedIndex ? ' carousel-dot--selected' : '',
+              )}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
