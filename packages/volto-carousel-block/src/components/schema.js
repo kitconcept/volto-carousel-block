@@ -153,8 +153,8 @@ export const Schema = ({ intl }) => {
       items_to_show: {
         type: 'number',
         title: intl.formatMessage(messages.itemsToShow),
-        maximum: 5,
-        minimum: 2,
+        maximum: 4,
+        minimum: 1,
       },
       hide_description: {
         title: intl.formatMessage(messages.hideDescription),

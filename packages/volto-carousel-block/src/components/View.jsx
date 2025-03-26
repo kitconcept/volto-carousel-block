@@ -29,10 +29,10 @@ const View = (props) => {
         'block',
         data['@type'],
         {
+          one: columns === '1',
           two: columns === '2',
           three: columns === '3',
           four: columns === '4',
-          five: columns === '5',
         },
         className,
       )}
