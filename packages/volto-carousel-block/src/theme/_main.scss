@@ -3,6 +3,61 @@
   --carousel-dots-bg: #ececec;
 }
 
+.carousel-wrapper {
+  max-width: var(--default-container-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  margin-left: -20px;
+
+  .block.teaser {
+    transform: translate3d(0, 0, 0);
+    padding-left: 20px;
+
+    &::before {
+      border: none;
+    }
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  touch-action: manipulation;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.carousel-button-prev {
+  left: 50px;
+}
+
+.carousel-button-next {
+  right: 50px;
+  // In case you want to remove the buttons from the mobile view
+  // @media only screen and (max-width: $computer-width) {
+  //   display: none !important;
+  // }
+}
+
 .carousel-dot {
   display: flex;
   width: 46px;
@@ -37,31 +92,28 @@
 }
 
 .block.carousel {
+  &.one .block.teaser {
+    flex: 0 0 calc(100% / 1);
+  }
+
   &.two .block.teaser {
-    transform: translate3d(0, 0, 0);
     flex: 0 0 calc(100% / 2);
   }
+
   &.three .block.teaser {
-    transform: translate3d(0, 0, 0);
     flex: 0 0 calc(100% / 3);
   }
+
   &.four .block.teaser {
-    transform: translate3d(0, 0, 0);
     flex: 0 0 calc(100% / 4);
   }
-  &.five .block.teaser {
-    transform: translate3d(0, 0, 0);
-    flex: 0 0 calc(100% / 5);
-  }
-  .carousel-viewport {
-    overflow: hidden;
-  }
-  .carousel-container {
-    display: flex;
 
-    .teaser-item.default {
-      display: flex;
-      flex-direction: column;
+  .teaser-item.default {
+    display: flex;
+    flex-direction: column;
+
+    .image-wrapper {
+      margin-right: 0;
     }
   }
 }
