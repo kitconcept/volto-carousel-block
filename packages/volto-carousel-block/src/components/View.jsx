@@ -9,7 +9,7 @@ const View = (props) => {
   const { data, className, isEditMode } = props;
   const itemsToShow = data.items_to_show || '4';
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
+    loop: data.loop || false,
     slidesToScroll: 1,
     align: 'start',
   });

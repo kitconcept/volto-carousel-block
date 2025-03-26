@@ -17,6 +17,8 @@ const applyConfig = (config) => {
     mostUsed: true,
     sidebarTab: 1,
     blockSchema: Schema,
+    // block settings
+    allowLoop: true,
   };
 
   return config;

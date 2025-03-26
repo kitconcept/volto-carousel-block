@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   Source: {
@@ -61,9 +62,13 @@ const messages = defineMessages({
     id: 'head_title',
     defaultMessage: 'Head title',
   },
+  loop: {
+    id: 'Loop',
+    defaultMessage: 'Loop',
+  },
 });
 
-const itemSchema = ({ data, intl }) => {
+const itemSchema = ({ intl }) => {
   return {
     title: intl.formatMessage(messages.item),
     addMessage: intl.formatMessage(messages.addItem),
@@ -117,7 +122,8 @@ const itemSchema = ({ data, intl }) => {
   };
 };
 
-export const Schema = ({ data, intl }) => {
+export const Schema = ({ intl }) => {
+  const allowLoop = config.blocks.blocksConfig.carousel.allowLoop;
   return {
     title: intl.formatMessage(messages.Carousel),
     block: 'carousel',
@@ -130,14 +136,16 @@ export const Schema = ({ data, intl }) => {
       {
         id: 'settings',
         title: intl.formatMessage(messages.settings),
-        fields: ['headline', 'items_to_show', 'hide_description'],
+        fields: !allowLoop
+          ? ['headline', 'items_to_show', 'hide_description']
+          : ['headline', 'items_to_show', 'hide_description', 'loop'],
       },
     ],
     properties: {
       columns: {
         widget: 'object_list',
         title: intl.formatMessage(messages.items),
-        schema: itemSchema({ data, intl }),
+        schema: itemSchema({ intl }),
       },
       headline: {
         title: intl.formatMessage(messages.headline),
@@ -150,6 +158,10 @@ export const Schema = ({ data, intl }) => {
       },
       hide_description: {
         title: intl.formatMessage(messages.hideDescription),
+        type: 'boolean',
+      },
+      loop: {
+        title: intl.formatMessage(messages.loop),
         type: 'boolean',
       },
     },
