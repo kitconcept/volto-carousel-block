@@ -3,8 +3,6 @@ import View from '@kitconcept/volto-carousel-block/components/View';
 import { Schema } from '@kitconcept/volto-carousel-block/components/schema';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
-import './theme/_main.scss';
-
 const applyConfig = (config) => {
   config.blocks.blocksConfig.carousel = {
     id: 'carousel',
