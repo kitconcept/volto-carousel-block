@@ -39,10 +39,12 @@ const View = (props) => {
     >
       {data.headline && <h2 className="headline">{data.headline}</h2>}
       <div className="carousel-wrapper">
-        <>
-          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
-        </>
+        {data.columns?.length > itemsToShow && (
+          <>
+            <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+            <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+          </>
+        )}
         <div className="carousel-viewport" ref={emblaRef}>
           <div className="carousel-container">
             {data.columns?.map((columnData) => {
