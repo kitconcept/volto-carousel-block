@@ -1,12 +1,13 @@
 :root {
   --carousel-dots-selected-bg: #000;
-  --carousel-dots-bg: #ececec;
+  --carousel-dots-bg: #c1c1c1;
 }
 
 .carousel-wrapper {
-  max-width: var(--default-container-width);
+  max-width: $default-container-width;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
 
 .carousel-viewport {
@@ -47,11 +48,11 @@
 }
 
 .carousel-button-prev {
-  left: 50px;
+  left: -150px;
 }
 
 .carousel-button-next {
-  right: 50px;
+  right: -150px;
   // In case you want to remove the buttons from the mobile view
   // @media only screen and (max-width: $computer-width) {
   //   display: none !important;
@@ -61,12 +62,10 @@
 .carousel-dot {
   display: flex;
   width: 46px;
-  height: 20px;
   align-items: center;
   padding: 0;
   border: 0;
   margin: 0;
-  margin-right: 13px;
   -webkit-appearance: none;
   background-color: transparent;
   cursor: pointer;
@@ -76,6 +75,8 @@
 
 .carousel-dots {
   display: flex;
+  gap: 13px;
+  padding: 47px 0;
   align-items: center;
   justify-content: center;
 }
@@ -91,7 +92,18 @@
   background: var(--carousel-dots-selected-bg);
 }
 
-.block.carousel {
+.block.carousel,
+#page-edit .block-editor-carousel .block.carousel,
+#page-add .block-editor-carousel .block.carousel {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  h2.headline {
+    max-width: $default-container-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &.one .block.teaser {
     flex: 0 0 calc(100% / 1);
   }
@@ -108,12 +120,89 @@
     flex: 0 0 calc(100% / 4);
   }
 
-  .teaser-item.default {
-    display: flex;
-    flex-direction: column;
-
-    .image-wrapper {
-      margin-right: 0;
+  @media only screen and (max-width: $computer-width) {
+    &.one .block.teaser,
+    &.two .block.teaser,
+    &.three .block.teaser,
+    &.four .block.teaser {
+      flex: 0 0 calc(100% / 3);
     }
+  }
+
+  @media only screen and (max-width: $tablet-breakpoint) {
+    &.one .block.teaser,
+    &.two .block.teaser,
+    &.three .block.teaser,
+    &.four .block.teaser {
+      flex: 0 0 calc(100% / 2);
+    }
+  }
+
+  @media only screen and (max-width: 520px) {
+    &.one .block.teaser,
+    &.two .block.teaser,
+    &.three .block.teaser,
+    &.four .block.teaser {
+      flex: 0 0 calc(100% / 1);
+    }
+  }
+
+  .block.teaser {
+    margin-bottom: 0 !important;
+
+    // External link icon
+    a.external {
+      .content h2:after {
+        @include external-link-icon();
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .teaser-item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .image-wrapper {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        img {
+          position: relative;
+        }
+      }
+      .content {
+        padding: 0 20px 20px 20px;
+        @include body-text();
+
+        .headline {
+          margin-bottom: 20px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          @include headtitle1();
+        }
+
+        h2 {
+          padding: 0;
+          margin-bottom: 20px !important;
+          @include text-heading-h3();
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.block.carousel,
+.block-editor-carousel {
+  &.has--background-color--grey .teaser .teaser-item:not(.placeholder),
+  &.has--background-color--default .teaser .teaser-item:not(.placeholder) {
+    background: var(--theme-high-contrast-color);
   }
 }
