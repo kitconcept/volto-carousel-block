@@ -7,6 +7,9 @@ The Volto Carousel Block allows editors to add a carousel to a Volto page.
 [![Code analysis checks](https://github.com/kitconcept/volto-carousel-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-carousel-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-carousel-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-carousel-block/actions/workflows/unit.yml)
 
+> [!WARNING]
+> This add-on is meant to be used in combination with the [volto-light-theme](https://github.com/kitconcept/volto-light-theme). If you plan to use this add-on with plain Volto you will have to write your own styles for it. You can use the existing ones as reference.
+
 ## Features
 
 <!-- List your awesome features here -->
@@ -64,12 +67,6 @@ Add `@kitconcept/volto-carousel-block` to your `volto.config.js`:
 
 ```javascript
 const addons = ['@kitconcept/volto-carousel-block'];
-```
-
-If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
-
-```javascript
-const theme = '@kitconcept/volto-carousel-block';
 ```
 
 ## Test installation
