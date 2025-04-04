@@ -35,7 +35,8 @@
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "@kitconcept/volto-carousel-block": "workspace:*"
+    "@kitconcept/volto-carousel-block": "workspace:*",
+    "@kitconcept/volto-light-theme": "6.0.0-alpha.21"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
