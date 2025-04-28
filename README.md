@@ -1,6 +1,9 @@
-# Volto Carousel Block (@kitconcept/volto-carousel-block)
+<picture>
+  <source width="200" media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img width="200" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
 
-The Volto Carousel Block allows editors to add a carousel to a Volto page.
+# Volto Carousel Block (@kitconcept/volto-carousel-block)
 
 [![npm](https://img.shields.io/npm/v/@kitconcept/volto-carousel-block)](https://www.npmjs.com/package/@kitconcept/volto-carousel-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-carousel-block/)
@@ -8,50 +11,33 @@ The Volto Carousel Block allows editors to add a carousel to a Volto page.
 [![Unit tests](https://github.com/kitconcept/volto-carousel-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-carousel-block/actions/workflows/unit.yml)
 
 > [!WARNING]
-> This add-on is meant to be used in combination with the [volto-light-theme](https://github.com/kitconcept/volto-light-theme). If you plan to use this add-on with plain Volto you will have to write your own styles for it. You can use the existing ones as reference.
+> This add-on is meant to be used in combination with the [volto-light-theme](https://github.com/kitconcept/volto-light-theme). If you plan to use this add-on with plain Volto you will have to write your own styles for it. You can use the existing ones via manual import like this `import "@kitconcept/volto-carousel/theme/_main.scss"` or as reference.
 
 ## Features
 
-<!-- List your awesome features here -->
+The `@kitconcept/volto-carousel-block` allows editors to add a carousel to a Volto page.
+
+### Looping Behavior (`allowLoop` Setting)
+The `allowLoop` setting controls whether looping can be enabled for individual blocks across the site.
+
+- **When `allowLoop` is set to `true`**:
+Each block will display a checkbox that allows you to enable or disable looping for that specific block individually.
+
+- **When `allowLoop` is set to false (or omitted)**:
+Looping is completely disabled across the entire site. No loop checkboxes will be shown, and blocks cannot be looped.
+
+Make sure to set `allowLoop` to `true` if you want to allow users to toggle looping behavior for specific blocks like this:
+
+```json
+config.blocks.blocksConfig.carousel = {
+  ...config.blocks.blocksConfig.carousel,
+  allowLoop: true,
+};
+```
 
 ## Installation
 
 To install your project, you must choose the method appropriate to your version of Volto.
-
-
-### Volto 17 and earlier
-
-Create a new Volto project (you can skip this step if you already have one):
-
-```
-npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon @kitconcept/volto-carousel-block
-cd my-volto-project
-```
-
-Add `@kitconcept/volto-carousel-block` to your package.json:
-
-```JSON
-"addons": [
-    "@kitconcept/volto-carousel-block"
-],
-
-"dependencies": {
-    "@kitconcept/volto-carousel-block": "*"
-}
-```
-
-Download and install the new add-on by running:
-
-```
-yarn install
-```
-
-Start volto with:
-
-```
-yarn start
-```
 
 ### Volto 18 and later
 
@@ -68,6 +54,42 @@ Add `@kitconcept/volto-carousel-block` to your `volto.config.js`:
 ```javascript
 const addons = ['@kitconcept/volto-carousel-block'];
 ```
+
+
+### Volto 17 and earlier
+
+Create a new Volto project (you can skip this step if you already have one):
+
+```shell
+npm install -g yo @plone/generator-volto
+yo @plone/volto my-volto-project --addon @kitconcept/volto-carousel-block
+cd my-volto-project
+```
+
+Add `@kitconcept/volto-carousel-block` to your package.json:
+
+```json
+"addons": [
+    "@kitconcept/volto-carousel-block"
+],
+
+"dependencies": {
+    "@kitconcept/volto-carousel-block": "*"
+}
+```
+
+Download and install the new add-on by running:
+
+```shell
+yarn install
+```
+
+Start volto with:
+
+```shell
+yarn start
+```
+
 
 ## Test installation
 
