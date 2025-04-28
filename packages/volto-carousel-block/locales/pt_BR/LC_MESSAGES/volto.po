@@ -23,7 +23,6 @@ msgstr ""
 
 #. Default: "Carousel"
 #: components/schema
-#: index
 msgid "Carousel"
 msgstr ""
 

@@ -18,7 +18,6 @@ msgstr "Element hinzufügen"
 
 #. Default: "Carousel"
 #: components/schema
-#: index
 msgid "Carousel"
 msgstr "Karussell"
 

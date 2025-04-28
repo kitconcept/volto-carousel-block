@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-04-28T08:21:47.835Z\n"
+"POT-Creation-Date: 2025-04-28T09:13:12.113Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,7 +20,6 @@ msgstr ""
 
 #. Default: "Carousel"
 #: components/schema
-#: index
 msgid "Carousel"
 msgstr ""
 
