@@ -5,7 +5,7 @@ import { PrevButton, NextButton, usePrevNextButtons } from './DotsAndArrows';
 import { DotButton, useDotButton } from './DotsAndArrows';
 import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBody';
 
-const View = (props) => {
+const CarouselView = (props) => {
   const { data, className, isEditMode } = props;
   const itemsToShow = data.items_to_show || '4';
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -83,4 +83,4 @@ const View = (props) => {
   );
 };
 
-export default View;
+export default CarouselView;

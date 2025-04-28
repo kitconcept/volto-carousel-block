@@ -5,7 +5,7 @@ import { difference, usePrevious } from '@plone/volto/helpers';
 import { replaceItemOfArray } from '@plone/volto/helpers/Utils/Utils';
 import { useIntl } from 'react-intl';
 
-const Data = (props) => {
+const CarouselData = (props) => {
   const {
     block,
     blocksConfig,
@@ -63,4 +63,4 @@ const Data = (props) => {
   );
 };
 
-export default withObjectBrowser(Data);
+export default withObjectBrowser(CarouselData);

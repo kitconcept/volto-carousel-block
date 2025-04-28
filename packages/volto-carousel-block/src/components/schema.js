@@ -122,7 +122,7 @@ const itemSchema = ({ intl }) => {
   };
 };
 
-export const Schema = ({ intl }) => {
+export const CarouselSchema = ({ intl }) => {
   const allowLoop = config.blocks.blocksConfig.carousel.allowLoop;
   return {
     title: intl.formatMessage(messages.Carousel),

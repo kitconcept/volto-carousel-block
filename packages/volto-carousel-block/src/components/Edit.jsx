@@ -3,9 +3,9 @@ import { SidebarPortal } from '@plone/volto/components';
 import { v4 as uuid } from 'uuid';
 
 import Sidebar from './Data';
-import View from './View';
+import CarouselView from './View';
 
-const Edit = (props) => {
+const CarouselEdit = (props) => {
   const { onChangeBlock, block, selected } = props;
   // create default data so `data.columns` is never undefined.
   const data = {
@@ -19,7 +19,7 @@ const Edit = (props) => {
 
   return (
     <>
-      <View {...props} isEditMode />
+      <CarouselView {...props} isEditMode />
       <SidebarPortal selected={selected}>
         <Sidebar
           {...props}
@@ -32,4 +32,4 @@ const Edit = (props) => {
   );
 };
 
-export default Edit;
+export default CarouselEdit;

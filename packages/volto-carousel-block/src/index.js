@@ -1,6 +1,6 @@
-import Edit from '@kitconcept/volto-carousel-block/components/Edit';
-import View from '@kitconcept/volto-carousel-block/components/View';
-import { Schema } from '@kitconcept/volto-carousel-block/components/schema';
+import CarouselEdit from '@kitconcept/volto-carousel-block/components/Edit';
+import CarouselView from '@kitconcept/volto-carousel-block/components/View';
+import { CarouselSchema } from '@kitconcept/volto-carousel-block/components/schema';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 const applyConfig = (config) => {
@@ -9,12 +9,12 @@ const applyConfig = (config) => {
     title: 'Carousel',
     group: 'common',
     icon: sliderSVG,
-    view: View,
-    edit: Edit,
+    view: CarouselView,
+    edit: CarouselEdit,
     restricted: false,
     mostUsed: true,
     sidebarTab: 1,
-    blockSchema: Schema,
+    blockSchema: CarouselSchema,
     // block settings
     allowLoop: true,
   };
