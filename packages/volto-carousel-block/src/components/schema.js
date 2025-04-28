@@ -58,9 +58,9 @@ const messages = defineMessages({
     id: 'Open in a new tab',
     defaultMessage: 'Open in a new tab',
   },
-  head_title: {
-    id: 'head_title',
-    defaultMessage: 'Head title',
+  kicker: {
+    id: 'kicker',
+    defaultMessage: 'Kicker',
   },
   loop: {
     id: 'Loop',
@@ -100,7 +100,7 @@ const itemSchema = ({ intl }) => {
         title: intl.formatMessage(messages.title),
       },
       head_title: {
-        title: intl.formatMessage(messages.head_title),
+        title: intl.formatMessage(messages.kicker),
       },
       description: {
         title: intl.formatMessage(messages.description),
