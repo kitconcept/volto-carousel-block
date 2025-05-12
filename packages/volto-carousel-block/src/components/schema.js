@@ -66,9 +66,18 @@ const messages = defineMessages({
     id: 'Loop',
     defaultMessage: 'Loop',
   },
+  overwrite: {
+    id: 'Customize teaser content',
+    defaultMessage: 'Customize teaser content',
+  },
+  overwriteDescription: {
+    id: 'Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later.',
+    defaultMessage:
+      'Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later.',
+  },
 });
 
-const itemSchema = ({ intl }) => {
+const itemSchema = ({ intl, value: data, activeObject }) => {
   return {
     title: intl.formatMessage(messages.item),
     addMessage: intl.formatMessage(messages.addItem),
@@ -76,7 +85,13 @@ const itemSchema = ({ intl }) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['href', 'title', 'head_title', 'description', 'preview_image'],
+        fields: [
+          'href',
+          'overwrite',
+          ...(data?.[activeObject]?.overwrite
+            ? ['title', 'head_title', 'description', 'preview_image']
+            : []),
+        ],
       },
     ],
 
@@ -95,6 +110,12 @@ const itemSchema = ({ intl }) => {
           '@type',
         ],
         allowExternals: true,
+      },
+      overwrite: {
+        title: intl.formatMessage(messages.overwrite),
+        description: intl.formatMessage(messages.overwriteDescription),
+        type: 'boolean',
+        default: false,
       },
       title: {
         title: intl.formatMessage(messages.title),
@@ -122,7 +143,7 @@ const itemSchema = ({ intl }) => {
   };
 };
 
-export const CarouselSchema = ({ intl }) => {
+export const CarouselSchema = ({ data, intl }) => {
   const allowLoop = config.blocks.blocksConfig.carousel.allowLoop;
   return {
     title: intl.formatMessage(messages.Carousel),
@@ -145,7 +166,9 @@ export const CarouselSchema = ({ intl }) => {
       columns: {
         widget: 'object_list',
         title: intl.formatMessage(messages.items),
-        schema: itemSchema({ intl }),
+        // We are passing the function, because we need the widget to take care of it
+        // to pass down the current `activeObject` to the `itemSchema` function.
+        schema: itemSchema,
       },
       headline: {
         title: intl.formatMessage(messages.headline),

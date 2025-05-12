@@ -7,7 +7,7 @@ import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBod
 
 const CarouselView = (props) => {
   const { data, className, isEditMode } = props;
-  const itemsToShow = data.items_to_show || '4';
+  const itemsToShow = data.items_to_show || 4;
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: data.loop || false,
     slidesToScroll: 1,
@@ -29,10 +29,10 @@ const CarouselView = (props) => {
         'block',
         data['@type'],
         {
-          one: columns === '1',
-          two: columns === '2',
-          three: columns === '3',
-          four: columns === '4',
+          one: columns === 1,
+          two: columns === 2,
+          three: columns === 3,
+          four: columns === 4,
         },
         className,
       )}

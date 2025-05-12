@@ -10,7 +10,7 @@ const CarouselEdit = (props) => {
   // create default data so `data.columns` is never undefined.
   const data = {
     columns: [1, 2, 3, 4].map(() => ({ '@id': uuid() })),
-    items_to_show: '4',
+    items_to_show: 4,
     ...props.data,
   };
   if (!props.data.columns) {
