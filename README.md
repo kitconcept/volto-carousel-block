@@ -1,6 +1,6 @@
 <picture>
-  <source width="200" media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
-  <img width="200" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+  <source align="right" width="200" media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img align="right" width="200" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
 </picture>
 
 # Volto Carousel Block (@kitconcept/volto-carousel-block)
@@ -12,6 +12,12 @@
 
 > [!WARNING]
 > This add-on is meant to be used in combination with the [volto-light-theme](https://github.com/kitconcept/volto-light-theme). If you plan to use this add-on with plain Volto you will have to write your own styles for it. You can use the existing ones via manual import like this `import "@kitconcept/volto-carousel/theme/_main.scss"` or as reference.
+
+## Compatibility
+
+| version | Volto version | VLT version |
+|-------------|---------------|-----------------------|
+| 1.x.x       |   >=Volto 18.20.0  | >= 7.0.0-alpha.1 |
 
 ## Features
 
