@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-06T16:01:32.969Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language: \n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: pt_BR\n"
+"Language-Name: Português do Brasil\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Add item"
+#: components/schema
+msgid "Add item"
+msgstr ""
+
+#. Default: "Carousel"
+#: components/schema
+msgid "Carousel"
+msgstr ""
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr ""
+
+#. Default: "Go to slide"
+#: components/DotsAndArrows
+msgid "Go to slide"
+msgstr ""
+
+#. Default: "Headline"
+#: components/schema
+msgid "Headline"
+msgstr ""
+
+#. Default: "Hide description"
+#: components/schema
+msgid "Hide description"
+msgstr ""
+
+#. Default: "Image override"
+#: components/schema
+msgid "Image override"
+msgstr ""
+
+#. Default: "Item"
+#: components/schema
+msgid "Item"
+msgstr ""
+
+#. Default: "Items"
+#: components/schema
+msgid "Items"
+msgstr ""
+
+#. Default: "Items to show"
+#: components/schema
+msgid "Items to show"
+msgstr ""
+
+#. Default: "Loop"
+#: components/schema
+msgid "Loop"
+msgstr ""
+
+#. Default: "Next slide"
+#: components/DotsAndArrows
+msgid "Next slide"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr ""
+
+#. Default: "Previous slide"
+#: components/DotsAndArrows
+msgid "Previous slide"
+msgstr ""
+
+#. Default: "Settings"
+#: components/schema
+msgid "Settings"
+msgstr ""
+
+#. Default: "Source"
+#: components/schema
+msgid "Source"
+msgstr ""
+
+#. Default: "Target"
+#: components/schema
+msgid "Target"
+msgstr ""
+
+#. Default: "Title"
+#: components/schema
+msgid "Title"
+msgstr ""
+
+#. Default: "Kicker"
+#: components/schema
+msgid "kicker"
+msgstr ""

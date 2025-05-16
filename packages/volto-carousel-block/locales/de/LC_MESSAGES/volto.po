@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: de\n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Add item"
+#: components/schema
+msgid "Add item"
+msgstr "Element hinzufügen"
+
+#. Default: "Carousel"
+#: components/schema
+msgid "Carousel"
+msgstr "Karussell"
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr "Beschreibung"
+
+#. Default: "Go to slide"
+#: components/DotsAndArrows
+msgid "Go to slide"
+msgstr "Gehe zu Slide"
+
+#. Default: "Headline"
+#: components/schema
+msgid "Headline"
+msgstr "Überschrift"
+
+#. Default: "Hide description"
+#: components/schema
+msgid "Hide description"
+msgstr "Beschreibung verbergen"
+
+#. Default: "Image override"
+#: components/schema
+msgid "Image override"
+msgstr "Bild überschreiben"
+
+#. Default: "Item"
+#: components/schema
+msgid "Item"
+msgstr "Element"
+
+#. Default: "Items"
+#: components/schema
+msgid "Items"
+msgstr "Elemente"
+
+#. Default: "Items to show"
+#: components/schema
+msgid "Items to show"
+msgstr "Anzuzeigende Elemente"
+
+#. Default: "Loop"
+#: components/schema
+msgid "Loop"
+msgstr ""
+
+#. Default: "Next slide"
+#: components/DotsAndArrows
+msgid "Next slide"
+msgstr "Nächster Slide"
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr "In neuem Tab öffnen"
+
+#. Default: "Previous slide"
+#: components/DotsAndArrows
+msgid "Previous slide"
+msgstr "Vorheriger Slide"
+
+#. Default: "Settings"
+#: components/schema
+msgid "Settings"
+msgstr "Einstellungen"
+
+#. Default: "Source"
+#: components/schema
+msgid "Source"
+msgstr "Quelle"
+
+#. Default: "Target"
+#: components/schema
+msgid "Target"
+msgstr "Ziel"
+
+#. Default: "Title"
+#: components/schema
+msgid "Title"
+msgstr "Titel"
+
+#. Default: "Kicker"
+#: components/schema
+msgid "kicker"
+msgstr "Kopftitel"

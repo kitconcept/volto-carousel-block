@@ -1,0 +1,48 @@
+{
+  "name": "@kitconcept/volto-carousel-block",
+  "version": "1.0.0-alpha.0",
+  "description": "The Volto Carousel Block allows editors to add a carousel to a Volto page.",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "kitconcept GmbH",
+  "homepage": "https://github.com/kitconcept/volto-carousel-block#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kitconcept/volto-carousel-block.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "addons": [
+    "@kitconcept/volto-bm3-compat"
+  ],
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "dependencies": {
+    "embla-carousel-autoplay": "8.5.2",
+    "embla-carousel-react": "8.5.2",
+    "@kitconcept/volto-bm3-compat": "^1.0.0-alpha.1"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "^3.6.1",
+    "@plone/types": "workspace:*",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "release-it": "^19.0.2"
+  }
+}
