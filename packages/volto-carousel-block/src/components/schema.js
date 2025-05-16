@@ -143,7 +143,7 @@ const itemSchema = ({ intl, value: data, activeObject }) => {
   };
 };
 
-export const CarouselSchema = ({ data, intl }) => {
+export const CarouselSchema = ({ intl }) => {
   const allowLoop = config.blocks.blocksConfig.carousel.allowLoop;
   return {
     title: intl.formatMessage(messages.Carousel),

@@ -1,6 +1,7 @@
 import React from 'react';
-import { SidebarPortal } from '@plone/volto/components';
 import { v4 as uuid } from 'uuid';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';
 
 import Sidebar from './Data';
 import CarouselView from './View';
@@ -32,4 +33,4 @@ const CarouselEdit = (props) => {
   );
 };
 
-export default CarouselEdit;
+export default withBlockExtensions(CarouselEdit);

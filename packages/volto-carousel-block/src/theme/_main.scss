@@ -104,45 +104,45 @@
     margin-left: auto;
   }
 
-  &.one .block.teaser {
+  .one .block.teaser {
     flex: 0 0 calc(100% / 1);
   }
 
-  &.two .block.teaser {
+  .two .block.teaser {
     flex: 0 0 calc(100% / 2);
   }
 
-  &.three .block.teaser {
+  .three .block.teaser {
     flex: 0 0 calc(100% / 3);
   }
 
-  &.four .block.teaser {
+  .four .block.teaser {
     flex: 0 0 calc(100% / 4);
   }
 
   @media only screen and (max-width: $computer-width) {
-    &.one .block.teaser,
-    &.two .block.teaser,
-    &.three .block.teaser,
-    &.four .block.teaser {
+    .one .block.teaser,
+    .two .block.teaser,
+    .three .block.teaser,
+    .four .block.teaser {
       flex: 0 0 calc(100% / 3);
     }
   }
 
   @media only screen and (max-width: $tablet-breakpoint) {
-    &.one .block.teaser,
-    &.two .block.teaser,
-    &.three .block.teaser,
-    &.four .block.teaser {
+    .one .block.teaser,
+    .two .block.teaser,
+    .three .block.teaser,
+    .four .block.teaser {
       flex: 0 0 calc(100% / 2);
     }
   }
 
   @media only screen and (max-width: 520px) {
-    &.one .block.teaser,
-    &.two .block.teaser,
-    &.three .block.teaser,
-    &.four .block.teaser {
+    .one .block.teaser,
+    .two .block.teaser,
+    .three .block.teaser,
+    .four .block.teaser {
       flex: 0 0 calc(100% / 1);
     }
   }

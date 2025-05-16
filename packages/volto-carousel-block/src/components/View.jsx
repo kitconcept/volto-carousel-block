@@ -3,10 +3,12 @@ import cx from 'classnames';
 import useEmblaCarousel from 'embla-carousel-react';
 import { PrevButton, NextButton, usePrevNextButtons } from './DotsAndArrows';
 import { DotButton, useDotButton } from './DotsAndArrows';
+import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
 import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBody';
+import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';
 
 const CarouselView = (props) => {
-  const { data, className, isEditMode } = props;
+  const { data, isEditMode } = props;
   const itemsToShow = data.items_to_show || 4;
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: data.loop || false,
@@ -24,21 +26,16 @@ const CarouselView = (props) => {
     data.columns?.length < itemsToShow ? data.columns?.length : itemsToShow;
 
   return (
-    <div
-      className={cx(
-        'block',
-        data['@type'],
-        {
+    <BlockWrapper {...props}>
+      {data.headline && <h2 className="headline">{data.headline}</h2>}
+      <div
+        className={cx('carousel-wrapper', {
           one: columns === 1,
           two: columns === 2,
           three: columns === 3,
           four: columns === 4,
-        },
-        className,
-      )}
-    >
-      {data.headline && <h2 className="headline">{data.headline}</h2>}
-      <div className="carousel-wrapper">
+        })}
+      >
         {data.columns?.length > itemsToShow && (
           <>
             <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
@@ -79,8 +76,8 @@ const CarouselView = (props) => {
           ))}
         </div>
       )}
-    </div>
+    </BlockWrapper>
   );
 };
 
-export default CarouselView;
+export default withBlockExtensions(CarouselView);
