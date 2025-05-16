@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-carousel-block",
-  "version": "1.0.0-alpha.0",
+  "version": "2.0.0-alpha.0",
   "description": "The Volto Carousel Block allows editors to add a carousel to a Volto page.",
   "main": "src/index.ts",
   "license": "MIT",
