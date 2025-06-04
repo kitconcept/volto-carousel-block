@@ -37,7 +37,7 @@ Looping is completely disabled across the entire site. No loop checkboxes will b
 
 Make sure to set `allowLoop` to `true` if you want to allow users to toggle looping behavior for specific blocks like this:
 
-```json
+```js
 config.blocks.blocksConfig.carousel = {
   ...config.blocks.blocksConfig.carousel,
   allowLoop: true,
