@@ -9,7 +9,7 @@ import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtens
 
 const CarouselView = (props) => {
   const { data, isEditMode } = props;
-  const itemsToShow = data.items_to_show || 4;
+  const itemsToShow = parseInt(data.items_to_show) || 4;
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: data.loop || false,
     slidesToScroll: 1,
