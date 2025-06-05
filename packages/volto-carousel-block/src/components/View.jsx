@@ -4,7 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { PrevButton, NextButton, usePrevNextButtons } from './DotsAndArrows';
 import { DotButton, useDotButton } from './DotsAndArrows';
 import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
-import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/DefaultBody';
+import DefaultBody from '@plone/volto/components/manage/Blocks/Teaser/Body';
 import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';
 
 const CarouselView = (props) => {
