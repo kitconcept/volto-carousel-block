@@ -40,6 +40,13 @@ export const CarouselBlockDataAdapter = ({
         };
       }
     }
+
+    // new items in the carousel block should have a @type set to 'teaser'
+    value.forEach((item) => {
+      if (!item['@type']) {
+        item['@type'] = 'teaser';
+      }
+    });
   }
 
   onChangeBlock(block, dataSaved);
