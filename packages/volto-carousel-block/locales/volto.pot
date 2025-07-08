@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-04-28T09:13:12.113Z\n"
+"POT-Creation-Date: 2025-07-08T20:17:15.434Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -21,6 +21,16 @@ msgstr ""
 #. Default: "Carousel"
 #: components/schema
 msgid "Carousel"
+msgstr ""
+
+#. Default: "Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later."
+#: components/schema
+msgid "Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later."
+msgstr ""
+
+#. Default: "Customize teaser content"
+#: components/schema
+msgid "Customize teaser content"
 msgstr ""
 
 #. Default: "Description"
