@@ -1,0 +1,1 @@
+Update Spanish translation #11 [@macagua]
