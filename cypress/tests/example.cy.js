@@ -1,15 +1,3 @@
-Cypress.on('uncaught:exception', (err) => {
-  if (
-    err.message.includes('Hydration failed') ||
-    err.message.includes('There was an error while hydrating') ||
-    err.message.includes('the entire root will switch to client rendering')
-  ) {
-    console.log(err.message);
-    return false; // Prevent Cypress from failing the test
-  }
-  return true; // Fail for other unexpected errors
-});
-
 context('Example Acceptance Tests', () => {
   describe('Visit a page', () => {
     beforeEach(() => {
