@@ -21,6 +21,16 @@ msgstr "Element hinzufügen"
 msgid "Carousel"
 msgstr "Karussell"
 
+#. Default: "Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later."
+#: components/schema
+msgid "Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later."
+msgstr ""
+
+#. Default: "Customize teaser content"
+#: components/schema
+msgid "Customize teaser content"
+msgstr ""
+
 #. Default: "Description"
 #: components/schema
 msgid "Description"
