@@ -179,7 +179,6 @@ export const CarouselSchema = ({ intl }) => {
         title: intl.formatMessage(messages.itemsToShow),
         choices: [
           [2, '2'],
-          [3, '3'],
           [4, '4'],
         ],
         default: 4,
