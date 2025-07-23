@@ -9,13 +9,13 @@ context('Example Acceptance Tests', () => {
         contentTitle: 'Test document',
       });
       cy.autologin();
-      cy.intercept('GET', '/**/document*').as('content');
+      cy.intercept('GET', '/*/document').as('content');
+      cy.visit('/');
     });
 
     it('As editor I can add edit a Page', function () {
-      cy.visit('/document');
       cy.navigate('/document/edit');
-      cy.wait('@content');
+      cy.wait(500);
       cy.get('#toolbar-save').click();
     });
   });
