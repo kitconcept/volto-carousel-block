@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.2 (2025-07-23)
+
+### Feature
+
+- Update Spanish translation #11 [@macagua] [#11](https://github.com/kitconcept/volto-carousel-block/issue/11)
+
 ## 2.0.0-alpha.1 (2025-06-05)
 
 ### Bugfix
