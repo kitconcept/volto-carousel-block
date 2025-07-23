@@ -174,10 +174,14 @@ export const CarouselSchema = ({ intl }) => {
         title: intl.formatMessage(messages.headline),
       },
       items_to_show: {
+        widget: 'select',
         type: 'number',
         title: intl.formatMessage(messages.itemsToShow),
-        maximum: 4,
-        minimum: 1,
+        choices: [
+          [2, '2'],
+          [4, '4'],
+        ],
+        default: 4,
       },
       hide_description: {
         title: intl.formatMessage(messages.hideDescription),
