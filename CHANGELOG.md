@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0 (2025-11-05)
+
+### Internal
+
+- Modernize before final release. @sneridagh [#15](https://github.com/kitconcept/volto-carousel-block/issue/15)
+
 ## 2.0.0-alpha.3 (2025-07-23)
 
 ### Feature
