@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0-alpha.0 (2025-11-05)
+
+### Breaking
+
+- Support for Volto 19 and VLT8. @sneridagh [#16](https://github.com/kitconcept/volto-carousel-block/issue/16)
+
 ## 2.0.0 (2025-11-05)
 
 ### Internal
