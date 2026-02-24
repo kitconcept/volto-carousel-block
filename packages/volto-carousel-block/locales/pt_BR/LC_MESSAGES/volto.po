@@ -19,104 +19,104 @@ msgstr ""
 #. Default: "Add item"
 #: components/schema
 msgid "Add item"
-msgstr ""
+msgstr "Adicionar item"
 
 #. Default: "Carousel"
 #: components/schema
 msgid "Carousel"
-msgstr ""
+msgstr "Carrossel"
 
 #. Default: "Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later."
 #: components/schema
 msgid "Check this box to customize the title, description, or image of the target content item for this teaser. Leave it unchecked to show updates to the target content item if it is edited later."
-msgstr ""
+msgstr "Marque esta caixa para personalizar o título, a descrição ou a imagem do item de conteúdo alvo para este teaser. Deixe desmarcado para exibir as atualizações do item se ele for editado posteriormente."
 
 #. Default: "Customize teaser content"
 #: components/schema
 msgid "Customize teaser content"
-msgstr ""
+msgstr "Personalizar conteúdo do teaser"
 
 #. Default: "Description"
 #: components/schema
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. Default: "Go to slide"
 #: components/DotsAndArrows
 msgid "Go to slide"
-msgstr ""
+msgstr "Ir para o slide"
 
 #. Default: "Headline"
 #: components/schema
 msgid "Headline"
-msgstr ""
+msgstr "Título"
 
 #. Default: "Hide description"
 #: components/schema
 msgid "Hide description"
-msgstr ""
+msgstr "Ocultar descrição"
 
 #. Default: "Image override"
 #: components/schema
 msgid "Image override"
-msgstr ""
+msgstr "Substituir imagem"
 
 #. Default: "Item"
 #: components/schema
 msgid "Item"
-msgstr ""
+msgstr "Item"
 
 #. Default: "Items"
 #: components/schema
 msgid "Items"
-msgstr ""
+msgstr "Itens"
 
 #. Default: "Items to show"
 #: components/schema
 msgid "Items to show"
-msgstr ""
+msgstr "Itens a exibir"
 
 #. Default: "Loop"
 #: components/schema
 msgid "Loop"
-msgstr ""
+msgstr "Loop"
 
 #. Default: "Next slide"
 #: components/DotsAndArrows
 msgid "Next slide"
-msgstr ""
+msgstr "Próximo slide"
 
 #. Default: "Open in a new tab"
 #: components/schema
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Abrir em nova aba"
 
 #. Default: "Previous slide"
 #: components/DotsAndArrows
 msgid "Previous slide"
-msgstr ""
+msgstr "Slide anterior"
 
 #. Default: "Settings"
 #: components/schema
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #. Default: "Source"
 #: components/schema
 msgid "Source"
-msgstr ""
+msgstr "Fonte"
 
 #. Default: "Target"
 #: components/schema
 msgid "Target"
-msgstr ""
+msgstr "Destino"
 
 #. Default: "Title"
 #: components/schema
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #. Default: "Kicker"
 #: components/schema
 msgid "kicker"
-msgstr ""
+msgstr "Kicker"
