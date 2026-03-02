@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0-alpha.1 (2026-03-02)
+
+### Feature
+
+- Added pt-BR translations. @humanaice [#17](https://github.com/kitconcept/volto-carousel-block/issue/17)
+
 ## 3.0.0-alpha.0 (2025-11-05)
 
 ### Breaking
