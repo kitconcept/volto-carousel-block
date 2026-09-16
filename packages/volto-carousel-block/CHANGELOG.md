@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0 (2026-09-16)
+
+### Internal
+
+- Update Voto. @sneridagh 
+
 ## 3.0.0-alpha.1 (2026-03-02)
 
 ### Feature
