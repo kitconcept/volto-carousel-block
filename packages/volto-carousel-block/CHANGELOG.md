@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.1.0 (2026-11-06)
+
+### Feature
+
+- The Carousel block is documented for the `@blocks-schema` endpoint of Volto 19.6, and its schema resolves outside the editor. The development setup uses Volto 19.6.1. @ericof [#20](https://github.com/kitconcept/volto-carousel-block/issue/20)
+
 ## 3.0.0 (2026-09-16)
 
 ### Internal
