@@ -22,6 +22,8 @@
 |-------------|---------------|-----------------------|
 | 1.x.x       |   >=Volto 18.20.0  | >= 7.0.0-alpha.1 |
 
+`@blocks-schema` support (the block schema and documentation that the Volto server publishes) requires Volto 19.6 or later. The add-on keeps working on older Volto 19 without it.
+
 ## Features
 
 The `@kitconcept/volto-carousel-block` allows editors to add a carousel to a Volto page.

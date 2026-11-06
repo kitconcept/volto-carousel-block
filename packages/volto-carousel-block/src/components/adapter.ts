@@ -1,4 +1,3 @@
-import compact from 'lodash/compact';
 import {
   difference,
   replaceItemOfArray,
@@ -20,7 +19,7 @@ export const CarouselBlockDataAdapter = ({
     const diff = difference(value, data[id]);
     // If we are moving two items in the array, the changeset is > 1
     // then we do not do any sync
-    const isReordering = compact(diff).length > 1;
+    const isReordering = diff.filter(Boolean).length > 1;
     if (!isReordering) {
       const index = diff.findIndex((val) => val);
       if (diff[index]?.href?.[0]) {
